@@ -81,9 +81,7 @@ hi stop looking at my html pls.
                             <?php
                                 if ($question->code !== null) {
                                     $code = htmlspecialchars(base64_decode($question->code));
-                                    echo <<<HEREDOC
-                                    <pre><code>$code</code></pre>
-HEREDOC;
+                                    echo "<pre><code>$code</code></pre>";
                                 }
                             ?>
 
