@@ -10,11 +10,12 @@
         die("Invalid JSON");
     }
 
-    $res = $db->executeQuery("UPDATE quizes SET canonical=:canonical, name=:name, questions=:questions WHERE qid=:qid", [
+    $res = $db->executeQuery("UPDATE quizes SET canonical=:canonical, name=:name, questions=:questions, background=:background WHERE qid=:qid", [
         ":canonical" => $_POST['canonical'],
         ":name" => $_POST['name'],
         ":questions" => $_POST['questions'],
-        ":qid" => $_POST['qid']
+        ":qid" => $_POST['qid'],
+        ":background" => $_POST['background']
     ]);
 
     if (!$res) {

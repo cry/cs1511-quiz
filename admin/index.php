@@ -14,7 +14,8 @@
         "edit",
         "results",
         "delete",
-        "update"
+        "update",
+        "new"
     ];
 
     if (!isset($_GET['p']) || !in_array($_GET['p'], ROUTES)) {
@@ -32,7 +33,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>lol quiz admin</title>
+        <title>cs1511 Quiz Admin</title>
 
         <link rel="stylesheet" href="../assets/bootstrap.min.css">
 
@@ -42,7 +43,7 @@
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
-                <p class="navbar-text" onclick="window.location.replace('?p=quizes')">mark is a meme</p>
+                <p class="navbar-text" onclick="window.location.replace('?p=quizes')">cs1511 Quiz Admin</p>
             </div>
           </div>
         </nav>

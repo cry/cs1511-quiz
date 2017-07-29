@@ -60,7 +60,7 @@ let submit = () => {
 
             document.getElementById("success").style.display = "block";
 
-            document.getElementById("msg").innerText += " " + String(data.score) + " out of " + String(data.total) + "!";
+            document.getElementById("msg").innerText += " " + String(data.score) + " out of " + String(data.total) + ".";
         }
     });
 }

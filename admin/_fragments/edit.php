@@ -41,6 +41,15 @@ if (isset($_GET['success']) && $_GET['success']) {
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="background">Background</label>
+                <input type="text" name="background" value="<?= htmlspecialchars($quiz['background']) ?>" class="form-control">
+            </div>
+        </div>
+    </div>
+
     <div class="form-group">
         <label for="questions">Question JSON</label>
         <textarea name="questions" class="form-control" id="code" rows="15"><?= htmlspecialchars(json_encode(json_decode($quiz['questions']), JSON_PRETTY_PRINT)) ?></textarea>

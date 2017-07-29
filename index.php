@@ -32,7 +32,7 @@ hi stop looking at my html pls.
 <html>
 <head>
     <meta charset="utf-8">
-    <title>cs1511 party quiz</title>
+    <title>cs1511 Quizes | <?= htmlspecialchars($quiz['name']) ?></title>
 
     <link rel="stylesheet" href="assets/bootstrap.min.css">
     <link rel="stylesheet" href="assets/codehighlight.css">
@@ -107,7 +107,7 @@ HEREDOC;
                     <div class="col-md-12">
                         <h3 id="msg">Submitted successfully! You got </h3> <br>
 
-                        <marquee><img src="assets/mark.jpg" alt=""></marquee>
+                        <!--<marquee><img src="assets/mark.jpg" alt=""></marquee>-->
                     </div>
                 </div>
             </div>
