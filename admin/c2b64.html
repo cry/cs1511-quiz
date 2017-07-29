@@ -1,0 +1,29 @@
+<h3>Enter your code here:</h3>
+
+<textarea name="name" rows="8" cols="80" id="code" style="font-family: monospace"></textarea> <button type="button" name="button" onclick="encode()">encode</button>
+
+<br>
+
+<textarea name="name" rows="8" cols="80" id="b64" style="font-family: monospace">base64 will appear here</textarea> <button type="button" name="button" onclick="decode()">decode</button>
+
+<script type="text/javascript">
+    function encode() {
+        document.getElementById("b64").value = btoa(document.getElementById("code").value)
+    }
+
+    document.getElementById("code").addEventListener("keydown", (e) => {
+        if (e.code != "Tab") return;
+
+        e.preventDefault();
+
+        let start = document.getElementById("code").selectionStart;
+
+        document.getElementById("code").value = document.getElementById("code").value.slice(0, document.getElementById("code").selectionStart) + "    " + document.getElementById("code").value.slice(document.getElementById("code").selectionStart)
+
+        document.getElementById("code").setSelectionRange(start + 4, start + 4);
+    });
+
+    function decode() {
+        document.getElementById("code").value = atob(document.getElementById("b64").value);
+    }
+</script>
