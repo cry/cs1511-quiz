@@ -50,7 +50,7 @@ let submit = () => {
     console.log(final);
 
     $.post("submit.php?q=" + qid, final, (data) => {
-        data = JSON.parse(data);
+        data = JSON.parse(data); console.log(data);
 
         if (typeof data.error !== "undefined") {
             alert("Something went wrong!");
@@ -59,6 +59,8 @@ let submit = () => {
             document.getElementById("memery").style.display = "none";
 
             document.getElementById("success").style.display = "block";
+
+            document.getElementById("msg").innerText += " " + String(data.score) + " out of " + String(data.total) + "!";
         }
     });
 }

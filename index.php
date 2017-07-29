@@ -65,7 +65,7 @@ hi stop looking at my html pls.
                 <div class="row" id="zidholder">
                     <div class="col-md-12"> <br>
                         <input type="text" class="form-control" placeholder="Your zID" id="zid"> <br>
-                        <button type="button" name="button" class="btn btn-success" class="width: 100%" onclick="letmein()">Let me in</button>
+                        <button type="button" name="button" class="btn btn-success" style="width: 100%;" onclick="letmein()">Let me in</button>
                     </div>
                 </div>
 
@@ -105,9 +105,9 @@ HEREDOC;
 
                 <div class="row" id="success">
                     <div class="col-md-12">
-                        <h3>Your submission has been recorded, kthxbye.</h3> <br>
+                        <h3 id="msg">Submitted successfully! You got </h3> <br>
 
-                        <img src="assets/mark.jpg" alt="">
+                        <marquee><img src="assets/mark.jpg" alt=""></marquee>
                     </div>
                 </div>
             </div>

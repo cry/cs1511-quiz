@@ -14,13 +14,18 @@ if (!$quiz) {
     die();
 }
 
+if (isset($_GET['success']) && $_GET['success']) {
+    echo '<div class="alert alert-success" role="alert">Changes written!</div>';
+}
+
 ?>
 
 <h3><strong> <?= htmlspecialchars($quiz['name']) ?></strong> <a href="c2b64.html" target="_blank"><small>code -> base64 encoder</small></a></h3> <br>
 
-<form class="" action="." method="post">
+<form class="" action="?p=update" method="post" id="form">
 
     <div class="row">
+        <input type="hidden" name="qid" value="<?= $quiz['qid'] ?>">
         <div class="col-md-6">
             <div class="form-group">
                 <label for="canonical">Canonical ID</label>
@@ -60,8 +65,16 @@ if (!$quiz) {
     });
 
     function save() {
-        // Validate the base64
+        // Validate the json
 
-        try {atob(document.getElementById("code")) } catch (e) {alert("Theres something wrong with your json, validate it on JSONVALIDATOR")};
+        try {
+            JSON.parse(document.getElementById("code").value);
+        } catch (e) {
+            alert("Invalid JSON, verify it with json validator.");
+            return;
+        }
+
+        document.getElementById("form").submit();
+
     }
 </script>

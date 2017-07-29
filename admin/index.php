@@ -13,7 +13,8 @@
         "logout",
         "edit",
         "results",
-        "delete"
+        "delete",
+        "update"
     ];
 
     if (!isset($_GET['p']) || !in_array($_GET['p'], ROUTES)) {
