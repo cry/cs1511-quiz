@@ -20,6 +20,23 @@ let zid = null;
 
 })();
 
+let letmein = () => {
+    let e = document.getElementById("zid");
+
+    if (e.value.match(/(z|Z)\d{7}/) === null) {
+        alert("Invalid zID");
+        return;
+    }
+
+    zid = e.value;
+
+    document.getElementById('title').style.display = 'none';
+
+    e.disabled = true; document.getElementById("zidholder").style.display = "none";
+
+    document.getElementById("memery").style.display = "block";
+}
+
 let submit = () => {
     let final = {
         zid: zid,

@@ -63,8 +63,9 @@ hi stop looking at my html pls.
                 <h3 id="title">Hi, who are you?</h3>
 
                 <div class="row" id="zidholder">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Your zID" id="zid">
+                    <div class="col-md-12"> <br>
+                        <input type="text" class="form-control" placeholder="Your zID" id="zid"> <br>
+                        <button type="button" name="button" class="btn btn-success" class="width: 100%" onclick="letmein()">Let me in</button>
                     </div>
                 </div>
 
